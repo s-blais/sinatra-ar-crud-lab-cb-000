@@ -38,7 +38,7 @@ class ApplicationController < Sinatra::Base
 
   patch '/articles/:id' do
     @article = Article.find(params[:id])
-    # I could not do the below as just @article.update(params) without getting an error because it was sending "_method" as part of the params hash
+    # I could not do the below as just @article.update(params) without getting an error because it was sending "_method" as part of the params hash, isn't it supposed to know better than to do that?
     @article.update(:title => params[:title], :content => params[:content])
     redirect to "/articles/#{@article.id}"
   end
