@@ -1,6 +1,8 @@
 
 require_relative '../../config/environment'
 
+# For some reason, it is impossible to exit shotgun after launching it. To be able to do anything else, I have to quite LearnIDE then reopen
+
 class ApplicationController < Sinatra::Base
 
   configure do
